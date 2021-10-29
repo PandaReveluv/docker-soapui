@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="77fe064e-09de-4d4a-861c-e465bc735492" activeEnvironment="Default" name="demo_soapUI" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="HelloWorld"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="sayHi TestCase"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" id="1ca9f878-e741-4151-b976-f01f40801159" wsaVersion="NONE" name="HelloWorldImplServiceSoapBinding" type="wsdl" bindingName="{http://mogul.com/}HelloWorldImplServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8088/mockHelloWorldImplServiceSoapBinding?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8088/mockHelloWorldImplServiceSoapBinding?WSDL"><con:part><con:url>http://localhost:8088/mockHelloWorldImplServiceSoapBinding?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="HelloWorldImplService" targetNamespace="http://mogul.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://mogul.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://mogul.com/">
+      <xsd:element name="sayHi" type="tns:sayHi"/>
+      <xsd:complexType name="sayHi">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="arg0" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="sayHiResponse" type="tns:sayHiResponse"/>
+      <xsd:complexType name="sayHiResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="sayHi">
+    <wsdl:part name="parameters" element="tns:sayHi"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sayHiResponse">
+    <wsdl:part name="parameters" element="tns:sayHiResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="HelloWorld">
+    <wsdl:operation name="sayHi">
+      <wsdl:input name="sayHi" message="tns:sayHi"></wsdl:input>
+      <wsdl:output name="sayHiResponse" message="tns:sayHiResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HelloWorldImplServiceSoapBinding" type="tns:HelloWorld">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="sayHi">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sayHi">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sayHiResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HelloWorldImplService">
+    <wsdl:port name="HelloWorldImplPort" binding="tns:HelloWorldImplServiceSoapBinding">
+      <soap:address location="http://dat-virtual-machine:8088/mockHelloWorldImplServiceSoapBinding"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://dat-virtual-machine:8088/mockHelloWorldImplServiceSoapBinding</con:endpoint></con:endpoints><con:operation id="e5c216ca-a4d9-4949-a388-de524e1fc4f6" isOneWay="false" action="" name="sayHi" bindingOperationName="sayHi" type="Request-Response" outputName="sayHiResponse" inputName="sayHi" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0c1571f6-afcb-42aa-aacd-44f1ccb87cd6" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dat-virtual-machine:8088/mockHelloWorldImplServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mog="http://mogul.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mog:sayHi>
+         <!--Optional:-->
+         <arg0>?</arg0>
+      </mog:sayHi>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mogul.com/HelloWorld/sayHi"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="a588fcf8-9597-40d7-ac93-7128fb002f4a" name="HelloWorld"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="9349954a-5022-496e-ba1f-f543f44fa5e8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="sayHi TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="c47023fd-6626-4471-baf9-ed55b67463e0" name="sayHi"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HelloWorldImplServiceSoapBinding</con:interface><con:operation>sayHi</con:operation><con:request name="sayHi" id="6ef6c385-bed8-4a9e-ad76-8f21d1411f43"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://dat-virtual-machine:8088/mockHelloWorldImplServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mog="http://mogul.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mog:sayHi>
+         <!--Optional:-->
+         <arg0>?</arg0>
+      </mog:sayHi>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://mogul.com/HelloWorld/sayHi" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6d5c65eb-50a0-4bed-b07e-a8a8c42a7f4b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="FailTestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="ba372ec2-1796-49a6-a1ec-d8616dc58a41" name="sayHi"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HelloWorldImplServiceSoapBinding</con:interface><con:operation>sayHi</con:operation><con:request name="sayHi" id="6ef6c385-bed8-4a9e-ad76-8f21d1411f43"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dat-virtual-machine:8088/mockHelloWorldImplServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mog="http://mogul.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mog:sayHi>
+         <!--Optional:-->
+         <arg0>?</arg0>
+      </mog:sayHi>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Invalid HTTP Status Codes" id="e6d65309-89d5-4f07-8857-3e2fd58beab6" name="Invalid HTTP Status Codes" disabled="true"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://mogul.com/HelloWorld/sayHi" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e52fad96-3cd2-4923-b4db-6b1323d7092c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Copy of sayHi TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="6a3944bb-233e-412b-85cf-83116a637f12" name="sayHi"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HelloWorldImplServiceSoapBinding</con:interface><con:operation>sayHi</con:operation><con:request name="sayHi" id="6ef6c385-bed8-4a9e-ad76-8f21d1411f43"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://dat-virtual-machine:8088/mockHelloWorldImplServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mog="http://mogul.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mog:sayHi>
+         <!--Optional:-->
+         <arg0>?</arg0>
+      </mog:sayHi>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://mogul.com/HelloWorld/sayHi" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
