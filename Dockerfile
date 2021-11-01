@@ -1,6 +1,6 @@
 FROM ubuntu
 COPY demo-soapUI-soapui-project.xml /test/
-COPY test.sh /test/
+COPY bin/test-in-docker.sh /test/
 WORKDIR /test
 RUN apt-get update
 RUN apt-get install -y wget
