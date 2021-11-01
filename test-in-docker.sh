@@ -1,5 +1,7 @@
 set -e -v
 
+echo "URL path = ${urlPath}
+
 docker-compose down
 docker-compose pull
 docker-compose -q build
