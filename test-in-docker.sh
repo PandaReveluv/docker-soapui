@@ -1,3 +1,5 @@
+set -e -v
+
 docker-compose down
 docker-compose pull
 docker-compose build
