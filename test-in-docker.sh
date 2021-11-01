@@ -1,6 +1,6 @@
 set -e -v
 
-echo "URL path = ${urlPath}
+echo "URL path = ${urlPath}"
 
 docker-compose down
 docker-compose pull
