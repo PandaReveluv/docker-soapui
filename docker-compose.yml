@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  tests:
+    build: .
+    ports:
+      - "5055:5055"
+    networks:
+      - test_network
+
+networks:
+  test_network:
+    driver: bridge
