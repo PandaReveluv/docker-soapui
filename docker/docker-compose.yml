@@ -1,7 +1,9 @@
 version: "2.2"
 services:
   tests:
-    build: ./docker/Dockerfile
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
     ports:
       - "5050:5050"
     networks:
