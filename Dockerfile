@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:11
 COPY demo-soapUI-soapui-project.xml /test/
 COPY bin/test-in-docker.sh /test/
 WORKDIR /test
