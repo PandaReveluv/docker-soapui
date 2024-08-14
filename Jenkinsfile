@@ -1,25 +1,18 @@
 pipeline {
     agent any
     stages {
-        stage('Initialize Docker') {
-                steps {
-                    script {
-                        def dockerHome = tool 'docker'
-                        env.PATH = "${dockerHome}/bin:${env.PATH}"
-                    }
-                }
-        }
         stage('Checkout source code') {
             steps {
                 script {
                     git branch: 'main',
-                        url: 'https://github.com/PandaReveluv/docker-soapui.git'
+                        url: 'https://github.com/PandaReveluv/nd035-c1-spring-boot-basics-project-starter'
                 }
             }
         }
-        stage('Testing') {
+        stage('Running UnitTest') {
             steps {
-                sh 'bin/test.sh'
+                sh 'cd starter/cloudstorage'
+                sh 'mvn -U install test'
             }
         }
         stage('Example stage 2') {
