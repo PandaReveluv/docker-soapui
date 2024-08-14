@@ -1,8 +1,14 @@
-export MAVEN_HOME=/opt/maven
-export PATH=$PATH:$MAVEN_HOME/bin
 pipeline {
     agent any
     stages {
+        stage('Init Maven') {
+                    steps {
+                        script {
+                            export MAVEN_HOME=/opt/maven
+                            export PATH=$PATH:$MAVEN_HOME/bin
+                }
+            }
+         }
         stage('Checkout source code') {
             steps {
                 script {
