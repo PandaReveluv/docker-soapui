@@ -18,9 +18,9 @@ pipeline {
                 sh 'mvn -f starter/critter/pom.xml -U install test'
             }
         }
-        stage('Example stage 2') {
+        stage('Echo done') {
             steps {
-                sh 'echo done'
+                sh 'echo =====Done======'
             }
         }
     }
