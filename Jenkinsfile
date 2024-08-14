@@ -9,6 +9,7 @@ pipeline {
                 script {
                     git branch: 'main',
                         url: 'https://github.com/PandaReveluv/nd035-c1-spring-boot-basics-project-starter'
+                    sh "ls -lat"
                 }
             }
         }
