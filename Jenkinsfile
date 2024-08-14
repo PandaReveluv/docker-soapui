@@ -4,7 +4,7 @@ pipeline {
         stage('Init Maven') {
                     steps {
                         script {
-                            var MAVEN_HOME='/opt/maven'
+                            def MAVEN_HOME='/opt/maven'
                             env.PATH="${PATH}:${MAVEN_HOME}/bin"
                 }
             }
