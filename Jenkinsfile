@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Example stage 2') {
             steps {
-                //
+                sh 'echo done'
             }
         }
     }
