@@ -1,14 +1,11 @@
+Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent any
+    tools {
+            maven 'maven'
+            jdk 'jdk8'
+        }
     stages {
-        stage('Init Maven') {
-                    steps {
-                        script {
-                            def MAVEN_HOME='/opt/maven'
-                            env.PATH="${PATH}:${MAVEN_HOME}/bin"
-                }
-            }
-         }
         stage('Checkout source code') {
             steps {
                 script {
