@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Running UnitTest') {
             steps {
-                sh 'mvn -f starter/critter/pom.xml -U install test'
+                sh 'mvn -f starter/critter/pom.xml -U clean package install test'
             }
         }
         stage('Echo done') {
