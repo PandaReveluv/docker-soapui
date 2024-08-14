@@ -17,9 +17,9 @@ pipeline {
                 }
             }
         }
-        stage('Example stage 1') {
+        stage('Testing') {
             steps {
-                sh 'docker --version'
+                sh 'bin/test.sh'
             }
         }
         stage('Example stage 2') {
