@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
             maven 'maven'
-            jdk 'jdk8'
+            jdk ''
         }
     stages {
         stage('Checkout source code') {
