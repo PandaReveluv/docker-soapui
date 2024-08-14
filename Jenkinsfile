@@ -6,6 +6,7 @@ pipeline {
                 def dockerHome = tool 'docker'
                 env.PATH = "${dockerHome}/bin:${env.PATH}"
             }
+        }
         stage('Checkout source code') {
             steps {
                 script {
