@@ -2,7 +2,6 @@ pipeline {
     agent any
     tools {
             maven 'maven'
-            jdk ''
         }
     stages {
         stage('Checkout source code') {
