@@ -1,6 +1,8 @@
 pipeline {
     agent {
-        'dockerContainer'
+        agent {
+       label "dockerContainer"
+    }
     }
     environment {
         AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
