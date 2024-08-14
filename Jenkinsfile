@@ -7,7 +7,7 @@ pipeline {
         stage('Checkout source code') {
             steps {
                 script {
-                    git branch: 'main',
+                    git branch: 'master',
                         url: 'https://github.com/PandaReveluv/nd035-c1-spring-boot-basics-project-starter'
                     sh "ls -lat"
                 }
