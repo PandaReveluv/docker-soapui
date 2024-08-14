@@ -1,12 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('Initialize Docker'){
-            steps {
-                def dockerHome = tool 'docker'
-                env.PATH = "${dockerHome}/bin:${env.PATH}"
-            }
-        }
+        stage('Initialize Docker') {
+                steps {
+                        def dockerHome = tool 'docker'
+                        env.PATH = "${dockerHome}/bin:${env.PATH}"
+                        }
+                }
         stage('Checkout source code') {
             steps {
                 script {
