@@ -7,6 +7,11 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
     }
     stages {
+        stage('Checkout source code') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Example stage 1') {
             steps {
                 //
