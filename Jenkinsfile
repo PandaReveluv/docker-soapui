@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout source code') {
             steps {
                 script {
-                    git branch: 'master',
+                    git branch: 'main',
                         url: 'https://github.com/PandaReveluv/docker-soapui.git'
                 }
             }
