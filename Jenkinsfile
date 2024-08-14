@@ -11,8 +11,7 @@ pipeline {
         }
         stage('Running UnitTest') {
             steps {
-                sh 'cd starter/cloudstorage'
-                sh 'mvn -U install test'
+                sh 'mvn -f /starter/cloudstorage/pom.xml -U install test'
             }
         }
         stage('Example stage 2') {
